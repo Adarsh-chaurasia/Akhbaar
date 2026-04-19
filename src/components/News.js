@@ -25,7 +25,7 @@ const News = (props)=>{
         props.setProgress(30);
         let parsedData = await data.json()
         props.setProgress(70);
-        setArticles(parsedData.articles)
+        setArticles(parsedData.articles || [])
         setTotalResults(parsedData.totalResults)
         setLoading(false)
         props.setProgress(100);
